@@ -1,0 +1,306 @@
+body {
+  margin: 0; 
+  background: url("../8 Інше/background.png");
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+/*Логотип сайту*/
+h1 {
+font-weight: 250;
+letter-spacing: 3px;
+max-width: 350px;
+width: 100%;
+position: relative;
+display: inline-block;
+color: #465457;
+}
+.title h1 {
+text-align: center;
+padding-bottom: 3px;
+color: #f34a4a;
+font-size: 55px;
+}
+.title h1:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 40%;
+  margin-left: -15%;
+  width: 50%;
+  height: 2px;
+  background: #f34a4a;
+}
+/*МЕНЮ*/
+nav {
+  background: #262F34;
+  box-shadow: 0 2px 0 0 #f34a4a;
+  border-top: 1px solid #262F34;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+  }
+.topmenu > li > a {
+  font-weight: 100;
+  padding: 20px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #f34a4a;
+}
+.activemenu:after, .submenu-link:after {
+color: #f34a4a;
+font-weight: 100;
+margin-left: 10px;
+}
+.topmenu .activemenu, .topmenu > li > a:hover, .submenu li a:hover {
+  color: #f34a4a;
+}
+.submenu {
+  position: absolute;
+  left: -1px;
+  z-index: 5;
+  width: 240px;
+  border-bottom: 1px solid #262F34;
+  visibility: hidden;
+  opacity: 0;  
+  transform: translateY(10px);
+  transition: .3s ease-in-out;
+}
+.submenu li {
+	position: relative;
+}
+.submenu a {
+  background: #262F34;
+  color: #f34a4a;
+  text-align: left;
+  font-size: 14px;
+font-weight: 100;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+}
+.submenu .submenu {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  left: -webkit-calc(100% - 1px);
+}
+nav li:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+/*Заголовок пункта*/
+.gorizol {
+	font-size: 30px;
+    font-weight: 200;
+	text-transform: uppercase;
+	line-height: 1.5;
+	text-align: center;
+	position: relative;
+}
+.gorizol span {
+	background: #262F34;
+	display: inline-block;
+	padding: 0px 30px;
+	position: relative;
+	color: #f34a4a;
+clip-path: polygon(5% 0, 100% 1%, 95% 100%, 0% 100%);
+}
+.gorizol:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;        
+	width: 100%;
+	height: 2px;
+	background: #f34a4a;
+}
+/*КАРТКА*/
+.card {
+  color: #f34a4a;
+  font-weight: 100;
+  padding: 20px;
+  border: 2px solid #f34a4a;
+  max-width: 300px;
+  width: 100%;
+  margin: 50px auto 0 35px;
+  background: #262F34;
+        float: left;
+}
+.card-title {
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1;
+  padding-bottom: 15px;
+  margin: 10px 0 20px;
+  color: #f34a4a;
+  text-align: center;
+  border-bottom: 2px solid #f34a4a;
+}
+.card img {
+  display: block;
+  max-width: 100%;
+  height: 100;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 17px;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+/*Оформлення текста*/
+.block1 {
+    font-size: 17px;
+	background: #f34a4a;
+	color: #262F34;
+	padding: 30px 30px;
+clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 95%);
+    margin-bottom: 1px;
+    margin-left: 400px;
+    margin-top: 50px;
+    margin-right: 15px;
+}
+.block2 {
+    font-size: 17px;
+	background: #262F34;
+	color: #f34a4a;
+	padding: 30px 30px;
+clip-path: polygon(0 0, 100% 5%, 100% 97%, 0 100%);
+    margin-bottom: 1px;
+    margin-left: 400px;
+    margin-right: 15px;
+}
+.block3 {
+    font-size: 17px;
+	background: #f34a4a;
+	color: #262F34;
+	padding: 30px 30px;
+clip-path: polygon(0 3%, 100% 0, 99% 100%, 0 100%);
+    margin-bottom: 1px;
+    margin-left: 400px;
+    margin-right: 15px;
+}
+/*Слайд-шоу, Фото інтерфейса*/
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+.slideshow-container {
+  max-width: 1080px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #f34a4a;
+  font-weight: bold;
+  font-size: 17px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  color: #f34a4a;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+.textshow {
+  color: #FCFCFC;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #262F34;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.active, .dot:hover {
+  background-color: #f34a4a;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*Кнопка завантажити*/
+.button-download {
+    background: transparent;
+    border: 1px solid #f34a4a;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: .3em;
+    padding: 17px 34px 17px 39px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.button-download:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background: #262F34;
+    z-index: -1;
+    transition: .25s ease;
+    transform: translate(0, 0);
+}
+.button-download:hover:before {
+    transform: translate(4px, 4px);
+}
+.button-download a {
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: 100;
+	color: #f34a4a;
+}
+/*Футер*/
+footer {
+    background: #262f34;
+    font-size: 17px;
+    font-weight: 100;
+    color: #F34A4A;
+    padding: 50px;
+    margin-top: 50px;
+}
+
