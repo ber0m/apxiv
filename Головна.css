@@ -1,0 +1,253 @@
+body {
+margin: 0; 
+background-image: url("../8 Інше/background.png");
+font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+/*Логотип сайту*/
+h1 {
+font-weight: 250;
+letter-spacing: 3px;
+max-width: 350px;
+width: 100%;
+position: relative;
+display: inline-block;
+color: #465457;
+}
+.title h1 {
+text-align: center;
+padding-bottom: 3px;
+color: #f34a4a;
+font-size: 55px;
+}
+.title h1:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 40%;
+  margin-left: -15%;
+  width: 50%;
+  height: 2px;
+  background: #f34a4a;
+}
+/*МЕНЮ*/
+nav {
+  background: #262F34;
+  box-shadow: 0 2px 0 0 #f34a4a;
+  border-top: 1px solid #262F34;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+  }
+.topmenu > li > a {
+  font-weight: 100;
+  padding: 20px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #f34a4a;
+}
+.active:after, .submenu-link:after {
+color: #f34a4a;
+font-weight: 100;
+margin-left: 10px;
+}
+.topmenu .active, .topmenu > li > a:hover, .submenu li a:hover {
+  color: #f34a4a;
+}
+.submenu {
+  position: absolute;
+  left: -1px;
+  z-index: 5;
+  width: 240px;
+  border-bottom: 1px solid #262F34;
+  visibility: hidden;
+  opacity: 0;  
+  transform: translateY(10px);
+  transition: .3s ease-in-out;
+}
+.submenu li {
+	position: relative;
+}
+.submenu a {
+  background: #262F34;
+  color: #f34a4a;
+  text-align: left;
+  font-size: 14px;
+font-weight: 100;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+}
+.submenu .submenu {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  left: -webkit-calc(100% - 1px);
+}
+nav li:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
+/*Блоки*/
+.post-wrap {
+   max-width: 1090px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.post-item {
+   padding: 10px;
+   cursor: pointer;
+}
+.post-item * {
+   transition: .3s linear;
+}
+.item-content {
+   background: #262F34;
+   padding: 40px;
+}
+.item-icon {
+   margin-bottom: 20px;
+}
+.item-icon:before {
+   content: "";
+   color: #f34a4a;
+   font-size: 50px;
+   line-height: 1;
+}
+.post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
+   transform: translateY(-8px);
+}
+.item-body {
+   color: #f34a4a;
+   font-size: 15px;
+}
+.item-body h3 {
+   font-weight: 500;
+   margin-bottom: 15px;
+   transition-delay: .05s;
+}
+.item-body p {
+   transition-delay: .1s;
+}
+.item-footer {
+   padding-top: 15px;
+}
+.link {
+   text-decoration: none;
+   display: inline-block;
+   overflow: hidden;
+   position: relative;
+   padding-right: 30px;
+   font-size: 12px;
+   text-transform: uppercase;
+   font-weight: 500;
+   color: #f34a4a;
+}
+.link:before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   bottom: 0;
+   height: .125rem;
+   margin: auto;
+   background: #f34a4a;
+   transform: scaleX(.2);
+   transform-origin: left center;
+   z-index: 0;
+   transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.link span {
+   display: inline-block;
+   position: relative;
+   transform: translateX(-200%);
+   transition: .6s cubic-bezier(.6, .01, 0, 1);
+}
+.post-item:hover .link span {
+   transform: translateX(0%);
+}
+.post-item:hover .link:before {
+   transform-origin: right center;
+}
+@media (min-width: 768px) {
+   .post-item {
+      flex-basis: 50%;
+      flex-shrink: 0;
+   }
+}
+@media (min-width: 960px) {
+   .post-item {
+      flex-basis: 33.333333333%;
+   }
+}
+/*Остані добавлені програми*/
+.blocknews {
+	color: #F34A4A;
+	padding: 10px 30px;
+	font-size: 17px;
+	border-radius: 4px;
+	position: relative;
+    margin: auto;
+    max-height: 300px;
+    max-width: 700px;
+    background: #262f34;
+        line-height: 1.38;
+       display: table;
+}
+.alignpng {
+       display: table;
+    float: left;
+      transform: translateX(-10px) translateY(-20px);
+}
+/*Заголовок пункта*/
+.gorizol {
+	font-size: 30px;
+    font-weight: 200;
+	text-transform: uppercase;
+	line-height: 1.5;
+	text-align: center;
+	position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.gorizol span {
+	background: #262F34;
+	display: inline-block;
+	padding: 0px 30px;
+	position: relative;
+	color: #f34a4a;
+clip-path: polygon(5% 0, 100% 1%, 95% 100%, 0% 100%);
+}
+.gorizol:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;        
+	width: 100%;
+	height: 2px;
+	background: #f34a4a;
+}
+/*Футер*/
+footer {
+    background: #262f34;
+    font-size: 17px;
+    font-weight: 100;
+    color: #F34A4A;
+    padding: 50px;
+    margin-top: 100px;
+}
