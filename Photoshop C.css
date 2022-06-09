@@ -3,6 +3,21 @@ body {
   background: url("other/background.png");
   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
+/*Полоса прокрутки*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #f34a4a; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #262F34;
+}
 /*Логотип сайту*/
 h1 {
 font-weight: 250;
